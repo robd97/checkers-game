@@ -18,7 +18,7 @@ public class Game {
 
     public Game(){
         for(int i = 1; i < 3; i++){
-            players[i-1] = new Player(i, 12);
+            players[i-1] = new Player(i);
         }
         Random rand = new Random();
         turn = rand.nextInt(2) + 1;
@@ -58,12 +58,12 @@ public class Game {
         switch(grid[y][x]){
             case 1:
                 return new int[][]{
-                checkMove(grid[y][x], y, x, 1, 1),
+                checkMove(grid[y][x], y, x, -1, -1),
                 checkMove(grid[y][x], y, x, -1, 1)};
             case 2:
                 return new int[][]{
                 checkMove(grid[y][x], y, x, 1, -1),
-                checkMove(grid[y][x], y, x, -1, -1)};
+                checkMove(grid[y][x], y, x, 1, 1)};
             default:
                 return new int[][]{
                 checkMove(grid[y][x], y, x, 1, 1),
