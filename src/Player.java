@@ -1,5 +1,3 @@
-package com.company;
-
 public class Player {
     private int playerNum;
     private int piecesLeft;

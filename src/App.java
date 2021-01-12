@@ -1,8 +1,6 @@
-package com.company;
-
 public class App {
     public static void main(String args[]){
-        Game mainGame = new Game();
+         Game mainGame = new Game();
 
         for(int i = 0; i < 8; i++){
             for(int j = 0; j < 8; j++){
